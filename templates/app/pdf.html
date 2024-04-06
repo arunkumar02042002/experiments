@@ -1,0 +1,120 @@
+{% load static %}
+
+<html>
+  <style>
+    /* 297 x 210 */
+    @page {
+      size: a4 landscape;
+      margin: 1cm;
+      margin-bottom: 1cm;
+    }
+
+    #headerContent {
+      text-align: center;
+      background-color: black;
+      color: white;
+    }
+
+    h1 {
+      font-size: 200%;
+    }
+
+    #lhs-table {
+      color: black;
+      text-align: center;
+      font-size: 600%;
+    }
+
+    .big {
+      font-size: 200%;
+      font-style: italic;
+    }
+
+    .day {
+      text-align: center;
+      background-color: black;
+      color: white;
+      width: 1.6cm;
+      height: 1.3cm;
+    }
+
+    #footerContent {
+      font-size: 200%;
+    }
+  </style>
+
+  <body>
+    <div>
+      <div id="">
+        <h1><br />HEADER<br /></h1>
+      </div>
+      <div id="">
+        <h1><br />HEADER<br /></h1>
+      </div>
+      <div id="">
+        <h1><br />HEADER<br /></h1>
+      </div>
+      <div id="">
+        <h1><br />HEADER<br /></h1>
+      </div>
+      <div id="">
+        <h1><br />HEADER<br /></h1>
+      </div>
+      <div id="">
+        <h1><br />HEADER<br /></h1>
+      </div>
+      <div id="">
+        <h1><br />HEADER<br /></h1>
+      </div>
+      <div id="">
+        <h1><br />HEADER<br /></h1>
+      </div>
+      <div id="">
+        <h1><br />HEADER<br /></h1>
+      </div>
+      <div id="">
+        <h1><br />HEADER<br /></h1>
+      </div>
+      <div id="">
+        <h1><br />HEADER<br /></h1>
+      </div>
+
+      <div id="">
+        <span class="day">Monday</span>
+        <img src="{{url}}" alt="" />
+        {{mobile}}
+      </div>
+    </div>
+    <div>
+      <div id="lhs">
+        <table id="lhs-table">
+          <tr>
+            <td>
+              <span class="big"><em>B</em></span>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="footerContent">
+        <span class="day">Tuesday</span>
+      </div>
+    </div>
+    <div>
+      <div id="lhs">
+        <table id="lhs-table">
+          <tr>
+            <td>
+              <span class="big"><em>C</em></span>
+            </td>
+            {{name}}
+          </tr>
+        </table>
+      </div>
+
+      <div id="footerContent">
+        <span class="day">Wednesday</span>
+      </div>
+    </div>
+  </body>
+</html>

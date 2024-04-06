@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice - Virsa</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+    }
+    @page {
+      size: A4 landscape;
+      margin: 1cm;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="card-header">
+        <img
+          src="https://d2abnqj5vuy2s4.cloudfront.net/Virsa%20pvt%20ltd.png"
+          alt=""
+          style="height: 100px"
+        />
+      </div>
+      <div class="company-info">
+        <h3>Virsa India</h3>
+        <p><strong>Email:</strong> info@virsaindia.in</p>
+        <p>
+          <strong>Address:</strong> G-2 Max Towers Gautam Buddh Nagar,
+          Sector-16B, Noida-201301
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div class="customer-info">
+      <div class="customer-info-inner">
+        <h5>Cutomer Name: {{name}}</h5>
+        <p><strong>Email:</strong> {{admin_email}}</p>
+        <p><strong>Mobile:</strong> {{admin_mobile}}</p>
+        <p><strong>Order Id:</strong> {{order_id}}</p>
+      </div>
+    </div>
+
+    <hr />
+    <div class="row">
+      <div class="col"><h3>Details:</h3></div>
+      <div class="container-fluid mt-2">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>Name:</td>
+              <td>{{firstName}} {{lastName}}</td>
+            </tr>
+            <tr>
+              <td>Mobile:</td>
+              <td>{{mobile}}</td>
+            </tr>
+            <tr>
+              <td>Age:</td>
+              <td>{{age}}</td>
+            </tr>
+            <tr>
+              <td>Relation:</td>
+              <td>{{relation}}</td>
+            </tr>
+            <tr>
+              <td>Amount Paid:</td>
+              <td>{{total_amount}}</td>
+            </tr>
+            <tr>
+              <td>Plan Purchased:</td>
+              <td>{{plan}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-muted">
+        Please keep the order id safe for future reference. For any queries
+        please contact us on
+        <strong>care@virsaindia.in</strong>.
+      </p>
+    </div>
+  </body>
+</html>

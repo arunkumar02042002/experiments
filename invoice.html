@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice - Virsa</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+    }
+    @page {
+      size: A4 landscape;
+      margin: 1cm;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="card-header">
+        <img
+          src="https://d2abnqj5vuy2s4.cloudfront.net/Virsa%20pvt%20ltd.png"
+          alt=""
+          style="height: 100px"
+        />
+      </div>
+      <div>
+        <img
+          src="data:image/png;base64,
+          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0KFDT/uSIC6MgIAAjR49+qSXX4HzwXGF6sKxhXNVI95FCAAAcCHViF80CgAAcCERWAAAAIYRWAAAAIYRWLhoNW/eXFOnTvX0GKiBOPYAnC8Cq4YaOHCgbDabbDabatWqpejoaI0cOVKVlRfPHxdbv369HnnkEU+PgfNw/DibMGGC2/oFCxZc1H8RgWPv4uNwODR8+HC1bNlSdrtd4eHh6tatm7KysnTo0CFPj/c/2Ww2LViwwNNj4AKqUb+mAe5uueUWZWdn68iRI8rPz1dycrJsNpsmTpzo6dEkSQ0bNvT0CDDAbrdr4sSJGjJkiOrVq+fpcf7Q4cOH5e/vz7F3kfnPf/6jbt26KTQ0VOPHj1eHDh0UEBCgLVu26M0331STJk30l7/8xdNjnrfjxx+8A2ewarCAgABFREQoMjJSiYmJio+P17JlyyT99qeE0tPTFR0drcDAQMXGxuqjjz5yPfbAgQMaMGCAGjZsqMDAQLVq1UrZ2dmu+7ds2aKePXsqMDBQYWFheuSRR1ReXu66f+DAgUpMTNSkSZPUqFEjhYWFKSUlRUeOHHFt8/uXaWw2m95++23dfvvtql27tlq1aqVPP/3U7XP69NNP1apVK9ntdt14442aOXOmbDabDh48aPirhzMVHx+viIgIpaenn/L+F154QVdeeaXbuqlTp6p58+au5ePHy/jx4xUeHq7Q0FCNHTtWR48e1dNPP6369euradOmbsegJBUVFenOO+9UaGio6tevr759++q77747ab/jxo1T48aN1bp1a0knH3sHDx7UkCFDFB4eLrvdrvbt22vhwoXn9XXBmXv88cfl5+enDRs26M4771RMTIxatGihvn37atGiRerTp4+k3/6dHnroITVs2FDBwcHq2bOnNm/e7LavrKwsXX755fL391fr1q317rvvut1vs9k0ffp03Xbbbapdu7ZiYmKUl5enXbt2qUePHgoKCtJ1112n3bt3uz3uk08+UadOnWS329WiRQuNGTNGR48elSTXsXz77bfLZrO5lo8f+2+//baio6Nlt9s1a9YshYWFyel0uu0/MTFR999/v6kvKS4AAguSpK1bt2rNmjWun57S09M1a9YsTZs2Tdu2bdOIESN03333aeXKlZKk559/Xtu3b9fixYu1Y8cOZWVlqUGDBpKkiooKJSQkqF69elq/fr3mzp2rf/7znyf9ktfly5dr9+7dWr58uWbOnKmcnBzl5OT84ZxjxozRnXfeqX//+9+69dZbNWDAAO3fv1+StGfPHt1xxx1KTEzU5s2bNWTIED377LOGv1I4W76+vho/frxef/11/fDDD+e8ny+//FJ79+7VV199pcmTJ2v06NG67bbbVK9ePa1bt06PPvqohgwZ4voYR44cUUJCgurWratVq1Zp9erVqlOnjm655RYdPnzYtd/c3FwVFBRo2bJlp4ymqqoq9e7dW6tXr9Z7772n7du3a8KECfL19T3nzwVn7r///a+++OILpaSkKCgo6JTbHH+5uX///tq3b58WL16s/Px8derUSb169XI9R8yfP1/Dhw/Xk08+qa1bt2rIkCEaNGiQli9f7ra/F198UQ888IA2bdqkNm3a6N5779WQIUOUlpamDRs2yLIst+ezVatW6YEHHtDw4cO1fft2TZ8+XTk5ORo3bpyk315ylqTs7Gz99NNPrmVJ2rVrlz7++GPNmzdPmzZtUv/+/XXs2DG3Hx737dunRYsW6cEHHzTwFcUFY6FGSk5Otnx9fa2goCArICDAkmT5+PhYH330kVVZWWnVrl3bWrNmjdtjBg8ebN1zzz2WZVlWnz59rEGDBp1y32+++aZVr149q7y83LVu0aJFlo+Pj+VwOFwfv1mzZtbRo0dd2/Tv39+66667XMvNmjWzpkyZ4lqWZD333HOu5fLyckuStXjxYsuyLOuZZ56x2rdv7zbLs88+a0myDhw4cBZfHZiSnJxs9e3b17Isy+ratav14IMPWpZlWfPnz7eOP/2MHj3aio2NdXvclClTrGbNmrntp1mzZtaxY8dc61q3bm1df/31ruWjR49aQUFB1gcffGBZlmW9++67VuvWra2qqirXNk6n0woMDLSWLl3q2m94eLjldDrdPv6Jx97SpUstHx8fq6Cg4Ny/EDhna9eutSRZ8+bNc1sfFhZmBQUFWUFBQdbIkSOtVatWWcHBwVZlZaXbdpdffrk1ffp0y7Is67rrrrMefvhht/v79+9v3Xrrra7l3z/P5OXlWZKsGTNmuNZ98MEHlt1udy336tXLGj9+vNt+3333XatRo0Zu+50/f77bNqNHj7Zq1apl7du3z239Y489ZvXu3du1/Morr1gtWrRwO5Zx8eMarBrsxhtvVFZWlioqKjRlyhT5+fkpKSlJ27Zt06FDh3TTTTe5bX/48GFdddVVkqTHHntMSUlJ2rhxo26++WYlJibquuuukyTt2LFDsbGxbj9tduvWTVVVVSooKHD9/cd27dq5nQVo1KiRtmzZ8oczd+zY0fX/g4KCFBwcrH379kmSCgoK1KVLF7ftr7nmmrP9sqCaTJw4UT179tRTTz11To9v166dfHz+/6R7eHi42rdv71r29fVVWFiY63jYvHmzdu3apbp167rtp7Ky0u3lnQ4dOvzhdS+bNm1S06ZNdcUVV5zT3KgeX3/9taqqqjRgwAA5nU5t3rxZ5eXlCgsLc9vu119/df1779ix46Q3L3Tr1k2vvvqq27oTn2eOP1916NDBbV1lZaXKysoUHByszZs3a/Xq1a4zVpJ07NgxVVZW6tChQ6pdu/ZpP49mzZqddM3fww8/rC5duujHH39UkyZNlJOT43rDCC4dBFYNFhQUpJYtW0qS3nnnHcXGxmrGjBmub1qLFi1SkyZN3B5z/O9x9e7dW99//70+//xzLVu2TL169VJKSoomTZp0xh+/Vq1abss2m01VVVXGH4OLQ/fu3ZWQkKC0tDQNHDjQtd7Hx0fW7/5i14nX4h13qn/7PzoeysvL1blzZ73//vsn7evEb2ine9npuMDAwD+8H9WrZcuWstlsKigocFvfokULSf//71NeXq5GjRppxYoVJ+0jNDT0rD7micfV8ag51boTj7UxY8aoX79+J+3Lbrf/4cc61fF31VVXKTY2VrNmzdLNN9+sbdu2adGiRWf1OcDzCCxI+u2b3N/+9jelpqbqm2++UUBAgAoLC3XDDTec9jENGzZUcnKykpOTdf311+vpp5/WpEmTFBMTo5ycHFVUVLiePFavXi0fHx/XRcTVoXXr1vr888/d1p14rQM8b8KECbryyivdjoOGDRvK4XDIsizXN65Nmzad98fq1KmTPvzwQ1122WUKDg4+5/107NhRP/zwg7755hvOYnlAWFiYbrrpJr3xxhsaNmzYaYO4U6dOcjgc8vPzc3uDxIliYmK0evVqJScnu9atXr1abdu2Pa8ZO3XqpIKCAtcPrKdSq1YtHTt27Iz3+dBDD2nq1Kn68ccfFR8fr8jIyPOaERceF7nDpX///vL19dX06dP11FNPacSIEZo5c6Z2796tjRs36vXXX9fMmTMlSaNGjdInn3yiXbt2adu2bVq4cKFiYmIkSQMGDJDdbldycrK2bt2q5cuXa9iwYbr//vtdp9urw5AhQ7Rz504988wz+uabb/SPf/zDddE8p9YvDh06dNCAAQP02muvudb16NFDP//8s15++WXt3r1bGRkZWrx48Xl/rAEDBqhBgwbq27evVq1apT179mjFihX661//elYX299www3q3r27kpKStGzZMu3Zs0eLFy/WkiVLzntGnJnMzEwdPXpUV199tT788EPt2LFDBQUFeu+997Rz5075+voqPj5ecXFxSkxM1BdffKHvvvtOa9as0bPPPqsNGzZIkp5++mnl5OQoKytL3377rSZPnqx58+ad88vWx40aNUqzZs3SmDFjtG3bNu3YsUNz5szRc88959qmefPmys3NlcPh0IEDB/7nPu+991798MMPeuutt7i4/RJFYMHFz89PQ4cO1csvv6y0tDQ9//zzSk9PV0xMjG655RYtWrRI0dHRkiR/f3+lpaWpY8eO6t69u3x9fTVnzhxJUu3atbV06VLt379fXbp00R133KFevXrpjTfeqNb5o6Oj9dFHH2nevHnq2LGjsrKyXO8iPP7SJjxv7Nixbi/rxsTEKDMzUxkZGYqNjdXXX3993t/wpN+Ow6+++kpRUVHq16+fYmJiNHjwYFVWVp71Ga2PP/5YXbp00T333KO2bdtq5MiRZ3U2Aufn8ssv17/+9S/Fx8crLS1NsbGxuvrqq/X666/rqaee0osvviibzabPP/9c3bt316BBg3TFFVfo7rvv1vfff+/6wS4xMVGvvvqqJk2apHbt2mn69OnKzs5Wjx49zmu+hIQELVy4UF988YW6dOmirl27asqUKWrWrJlrm1deeUXLli1TZGSk61rWPxISEqKkpCTVqVNHiYmJ5zUfPMNm/f7iB8CLjBs3TtOmTVNRUZGnRwGAs9KrVy+1a9fO7YwvLh1cgwWvkpmZqS5duigsLEyrV6/W3//+95N+/xYAXMwOHDigFStWaMWKFcrMzPT0ODhHBBa8yrfffquXXnpJ+/fvV1RUlJ588kmlpaV5eiwAOGNXXXWVDhw4oIkTJ1brG4NQvXiJEAAAwDAucgcAADCMwAIAADCMwAIAADCMwAIAADCMwAIAADCMwAIAADCMwAIAADCMwAIAADDs/wCzlW5NnTFO/QAAAABJRU5ErkJggg=="
+          alt="Red dot"
+        />
+      </div>
+      <div class="company-info">
+        <h3>Virsa India</h3>
+        <p><strong>Email:</strong> info@virsaindia.in</p>
+        <p>
+          <strong>Address:</strong> G-2 Max Towers Gautam Buddh Nagar,
+          Sector-16B, Noida-201301
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div class="customer-info">
+      <div class="customer-info-inner">
+        <h5>Cutomer Name: {{name}}</h5>
+        <p><strong>Email:</strong> {{admin_email}}</p>
+        <p><strong>Mobile:</strong> {{admin_mobile}}</p>
+        <p><strong>Order Id:</strong> {{order_id}}</p>
+      </div>
+    </div>
+
+    <hr />
+    <div class="row">
+      <div class="col"><h3>Details:</h3></div>
+      <div class="container-fluid mt-2">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>Name:</td>
+              <td>{{firstName}} {{lastName}}</td>
+            </tr>
+            <tr>
+              <td>Mobile:</td>
+              <td>{{mobile}}</td>
+            </tr>
+            <tr>
+              <td>Age:</td>
+              <td>{{age}}</td>
+            </tr>
+            <tr>
+              <td>Relation:</td>
+              <td>{{relation}}</td>
+            </tr>
+            <tr>
+              <td>Amount Paid:</td>
+              <td>{{total_amount}}</td>
+            </tr>
+            <tr>
+              <td>Plan Purchased:</td>
+              <td>{{plan}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-muted">
+        Please keep the order id safe for future reference. For any queries
+        please contact us on
+        <strong>care@virsaindia.in</strong>.
+      </p>
+    </div>
+
+    <p id="demo"></p>
+
+    <div id="myDIV">
+      <p>I am a paragraph</p>
+      <p>I am a paragraph</p>
+      <p>I am a paragraph</p>
+    </div>
+
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      function my_func() {
+        let count = document.getElementById("myDIV").children.length;
+        document.getElementById("demo").innerHTML = count;
+        console.log("I'm first");
+        const ctx = document.getElementById("myChart");
+
+        const chart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [
+              {
+                label: "# of Votes",
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+
+        // Convert the chart to a data URL
+        const chartDataURL = chart.toDataURL("image/png");
+
+        // Create an <img> tag and set its src attribute to the data URL
+        const chartImg = document.createElement("img");
+        chartImg.src = chartDataURL;
+
+        // Append the <img> tag to the document
+        document.body.appendChild(chartImg);
+      }
+      console.log("I'm last");
+
+      my_func();
+    </script>
+  </body>
+</html>

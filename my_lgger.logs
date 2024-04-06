@@ -1,0 +1,13 @@
+my_logger:2024-03-20 14:28:21,839 ERROR: - Division by zero with paramteres 2 and 0
+my_logger:2024-03-20 14:29:03,808 ERROR: - Division by zero with paramteres 2 and 0
+my_logger:2024-03-20 14:29:11,812 ERROR: - Division by zero with paramteres 2 and 0
+my_logger: 2024-03-20 14:30:17,591: ERROR: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Division by zero with paramteres 2 and 0
+my_logger:2024-03-20 14:30:53,532: ERROR: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Division by zero with paramteres 2 and 0
+my_logger:2024-03-20 14:32:44,099: ERROR: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Division by zero with paramteres 2 and 0
+my_logger:2024-03-20 14:34:48,725: ERROR: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Division by zero with paramteres 2 and 0: division by zero
+my_logger:2024-03-26 10:49:19,001: ERROR: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Division by zero with paramteres 2 and 0: division by zero
+my_logger:2024-03-26 15:32:01,332: ERROR: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Division by zero with paramteres 2 and 0: division by zero
+my_logger:2024-03-26 15:32:24,513: ERROR: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Division by zero with paramteres 2 and 0: division by zero
+my_logger:2024-03-26 15:32:53,029: ERROR: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Division by zero with paramteres 2 and 0: division by zero
+my_logger:2024-03-26 15:34:38,887: ERROR: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Division by zero with paramteres 2 and 0: division by zero
+my_logger:2024-03-26 15:35:00,924: ERROR: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Division by zero with paramteres 2 and 0: division by zero
