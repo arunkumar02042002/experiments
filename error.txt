@@ -1,0 +1,5 @@
+my_logger:2024-04-09 10:44:04,200: ERROR: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Division by zero with paramteres 2 and 0: division by zero
+my_logger:2024-04-09 10:44:33,561: ERROR: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Division by zero with paramteres 2 and 0: division by zero
+my_logger:2024-04-09 10:53:57,660: INFO: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Result: 2/0=0
+my_logger:2024-04-09 10:53:57,660: ERROR: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Division by zero with paramteres 2 and 0: division by zero
+my_logger:2024-04-09 10:53:57,660: INFO: logs: logs.py: /home/sumit/Desktop/logging_in_django/logs.py - Result: 3/6=0.5

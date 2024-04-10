@@ -4,7 +4,7 @@ import logging
 import sys
 
 # Create a Logger object
-logger = logging.getLogger('my_logger')
+my_logger = logging.getLogger('my_logger')
 
 # Create a formatter object
 default_formattor = logging.Formatter(
@@ -17,21 +17,21 @@ console_handler = logging.StreamHandler(stream=sys.stdout)
 console_handler.setFormatter(default_formattor)
 
 # File handler - records everything in the fils
-file_handler = logging.FileHandler(filename='my_lgger.logs')
+file_handler = logging.FileHandler(filename='error.txt')
 file_handler.setFormatter(default_formattor)
 
-
-# logger.setLevel('DEBUG')
-logger.addHandler(console_handler)
-logger.addHandler(file_handler)
+my_logger.setLevel('DEBUG')
+my_logger.addHandler(console_handler)
+my_logger.addHandler(file_handler)
 
 
 def division(n, d):
     try:
         result = n/d
-        logger.info(f'Result: {n}/{d}={result}')
+        my_logger.info(f'Result: {n}/{d}={result}')
     except ZeroDivisionError as e:
-        logger.error(f"Division by zero with paramteres {n} and {d}: {e}")
+        my_logger.info(f'Result: {n}/{d}={0}')
+        my_logger.error(f"Division by zero with paramteres {n} and {d}: {e}")
 
 
 def print_data():

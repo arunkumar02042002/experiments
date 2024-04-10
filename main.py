@@ -3,9 +3,6 @@ import matplotlib.pyplot as plt
 import io
 import base64
 
-# def generate_pdf()
-pdfkit.from_file('invoice.html', 'index.pdf')
-
 # pdfkit.from_url('http://127.0.0.1:5501/invoice.html', 'example.pdf')
 
 
@@ -95,4 +92,14 @@ if __name__ == '__main__':
     # values = [53.7247393072851, 44.351858926981, 25.259835915192]
     # images_base64 = GenerateChartUtiity.make_chart(categories, values)
     # print(images_base64)
-    pdfkit.from_file('invoice.html', 'index.pdf')
+    # pdfkit.from_file('invoice.html', 'index.pdf')
+    # def generate_pdf()
+
+    with open("bg-image.jpg", "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+
+    print(encoded_string)
+
+    pdfkit.from_file('testing.html', 'testing.pdf', css='testing.css')
+    # pdfkit.from_file('invoice.html', 'invoice.pdf')
+    # pdfkit.from_file('invoice2.html', 'invoice2.pdf')
